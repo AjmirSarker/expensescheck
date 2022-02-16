@@ -6,6 +6,7 @@ function CheckInput(a) {
   } else {
     if (parseInt(document.getElementById(a).value) < 0) {
       document.getElementById('W_msg').style.display = 'block';
+      document.getElementById('ok').innerText = a;
     } else {
       document.getElementById('W_msg').style.display = 'none';
     }
@@ -25,6 +26,7 @@ function calculateTotalExp() {
     document.getElementById('totalexp').innerText = TotalExp;
     let Balance = income - TotalExp;
     document.getElementById('balance').innerText = Balance;
+    document.getElementById('worstspend').style.display = 'none';
   } else {
     document.getElementById('worstspend').style.display = 'block';
     document.getElementById('totalexp').innerText = '';
@@ -41,6 +43,7 @@ function SavingAmount() {
   if (Balancesure >= savingCal && remaining >= 0) {
     document.getElementById('saveamount').innerText = savingCal;
     document.getElementById('remainingbalance').innerText = remaining;
+    document.querySelector('.lasterror').style.display = 'none';
   } else {
     document.querySelector('.lasterror').style.display = 'block';
     document.getElementById('saveamount').innerText = '';
