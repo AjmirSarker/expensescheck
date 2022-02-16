@@ -10,8 +10,10 @@ section {
     background-color: rgb(226, 226, 226);
     width: 90%;
     height: fit-content;
+    box-sizing: border-box;
 }
 .box{
     display: inline-block;
     width: 15%;
+    margin-right:5%;
 }
