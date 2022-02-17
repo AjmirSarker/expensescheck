@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="">
-    <section class="container my-5">
-        <h1 class="text-center my-3">Monthly Expense Tracker</h1>
+    <section class="container my-5 shadow-lg ">
+        <h1 class="text-center my-3 fw-bolder text-info shad  ">Monthly Expense Tracker <i class="fa-solid fa-hand-holding-dollar"></i></h1>
         <div class="row px-2 py-4">
-            <div class="col-12 col-md-6 col-lg-8 ">
+            <div class="col-12 col-md-6 col-lg-7 ">
                 <div class="h-100">
-                    <img src="/resources/money.jpg" class="img-fluid h-100 w-100" alt="">
+                    <img src="/resources/money.jpg" class="img-fluid h-100 w-100 image" alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-5 ">
                 <div class="form text-center card h-100 w-100">
                     <h3 class="my-4">Income</h3>
-                    <p > <span class="box">Income : </span><input type="number" name="" id="income-input" required onkeyup="CheckInput('income-input')" /></p>
+                    <p > <span class="box">Income : </span><input type="number" name="" value="" required id="income-input"  onkeyup="CheckInput('income-input')" /></p>
                     <h3 class="my-4">Expenses</h3>
-                    <p > <span class="box"> Food : </span> <input type="number" name="" id="food-input" required onkeyup="CheckInput('food-input')"  /></p>
-                    <p > <span class="box"> Rent : </span><input type="number" name="" id="rent-input" required  onkeyup="CheckInput('rent-input')" /> </p>
-                    <p > <span class="box"> Clothes : </span> <input type="number" name="" id="clothes-input" required  onkeyup="CheckInput('clothes-input')" /> </p>
+                    <p > <span class="box"> Food : </span> <input type="number" name="" value=""required id="food-input"  onkeyup="CheckInput('food-input')"  /></p>
+                    <p > <span class="box"> Rent : </span><input type="number" name="" value=""required id="rent-input"   onkeyup="CheckInput('rent-input')" /> </p>
+                    <p > <span class="box"> Clothes : </span> <input type="number" name="" value=""required id="clothes-input"   onkeyup="CheckInput('clothes-input')" /> </p>
                     <p  id = "W_msg" style="display: none;color: red;"   > <span id="ok"></span> value is wrong</p>
                     <button class="btn my-3 mx-auto btn-1" onclick="calculateTotalExp()">Calculate</button>
                     <h4>Total Expense: $ <span id="totalexp" ></span></h4>
@@ -32,7 +32,7 @@
                     <h5 class="my-2">Balance: $  <span id="balance"></span></h5>
                     <p >
                       Save: <input class="w-25 py-2" type="number" id="saving" /> <span class="mx-2"> %</span>
-                      <button class="btn btn-2 py-2 pxxx-3" onclick="SavingAmount()">Save</button>
+                      <button class="btn btn-1 py-2 pxxx-3" onclick="SavingAmount()">Save</button>
                     </p>
                     <h4 >Saving Amount: $ <span id="saveamount"> </span></h4>
                     <h6 class="mb-3">Remaining Balance: $ <span id="remainingbalance"></span> </h6>

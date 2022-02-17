@@ -2,35 +2,53 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 .container {
   border: 1px solid;
 }
 .card {
-  background: #f7f7f7;
+  background: #e4e1e1;
+}
+.image:hover{
+  transition: 1.2s ease-in-out;
+  transform: scale(1.05);
 }
 input {
-  background: rgb(235, 233, 233);
+  background: rgb(255, 251, 251);
   border: none;
   padding: 5px;
 }
 input:focus{
   border-radius: 10px;
   outline: none;
-  border: 3px solid aquamarine;
+  border: 3px solid rgb(119, 163, 148);
  
 }
 .btn-1 {
   color: white !important;
-  background-color: lightcoral;
+  background-color: rgb(39, 170, 137);
+  border-radius: 5px;
+  font-weight: 600;
 }
-.btn-2 {
-  color: white !important;
-  background-color: lightcoral;
+.btn-1:hover{
+  color: black !important;
+  background-color: rgba(49, 173, 179, 0.479);
+  border-radius: 15px;
+  transition: 1.5s;
 }
+
 .box {
   display: inline-block;
   width: 23%;
   margin-right: 5%;
+}
+.container{
+  border: 2px solid rgb(34, 97, 102);
+  
+  
+}
+.shad{
+  text-shadow: 2px 5px 10px cyan;
 }
