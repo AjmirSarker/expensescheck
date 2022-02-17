@@ -26,7 +26,7 @@
                     <h3 class="my-4 fw-bolder">Expenses</h3>
                     <p > <span class="box fw-bold"> Food : </span> <input type="number" name="" value=""required id="food-input" class="text-center"  onkeyup="CheckInput('food-input')"  /></p>
                     <p > <span class="box fw-bold"> Rent : </span><input type="number" name="" value=""required id="rent-input" class="text-center"   onkeyup="CheckInput('rent-input')" /> </p>
-                    <p > <span class="box fw-bold"> Clothes : </span> <input type="number" name="" value=""required id="clothes-input" class="text-center"   onkeyup="CheckInput('clothes-input')" /> </p>
+                    <p > <span class="box fw-bold"> Clothes : </span> <input type="number" name="" required id="clothes-input" class="text-center"   onkeyup="CheckInput('clothes-input')" /> </p>
                     <!-- Giving Error Part -->
                     <p  class="fw-bold" id = "W_msg" style="display: none;color: red;"   > <span id="ok"></span> value is wrong</p>
                     <!-- Calculate Expenses Button -->
@@ -37,9 +37,9 @@
                     <p class="fw-bold" id="worstspend" style="display: none;color: red;">Total Expenses is greater than Total Income</p>
                     <h5 class="my-2 fw-bolder">Balance: $  <span id="balance"></span></h5>
                     <p class="fw-bold" >
-                      Save : <input class="w-25 py-2 ms-2" type="number" id="saving" onkeyup="CheckInput('saving')" class="text-center" /> <span class="mx-2 "> %</span>
+                      Save : <input class="w-25 py-2 ms-2 text-center" type="number" id="saving" value="0" onkeyup="CheckInput('saving')"  /> <span class="mx-2 "> %</span>
                       <!-- Saving Calculate Button -->
-                      <button class="btn btn-1 py-2 pxxx-3" onclick="SavingAmount()">Save</button>
+                      <button class="btn btn-1 py-2 px-3" onclick="SavingAmount()">Save</button>
                     </p>
                     <h4 class="fw-bolder" >Saving Amount: $ <span id="saveamount"> </span></h4>
                     <h5 class="mb-3 fw-bolder">Remaining Balance: $ <span id="remainingbalance"></span> </h5>

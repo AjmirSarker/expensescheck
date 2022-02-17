@@ -27,6 +27,19 @@ function ReturnRentCost(){
 function ReturnClothesCost(){
   return document.getElementById('clothes-input').value;
 }
+function ReturnSavingInputValue(){
+  return document.getElementById('saving').value;
+}
+function EmptyCheck(receive){
+  if(receive){
+    document.getElementById("empty").style.display="block"
+
+  }
+  else{
+    document.getElementById("empty").style.display="none"
+
+  }
+}
 //This Function is for Calculating the Expenses and Balance,And also checks Error
 function calculateTotalExp() {
   let income =parseFloat( ReturnIncomevalue());
@@ -37,7 +50,8 @@ function calculateTotalExp() {
     food + rent + clothes
   );
   if(ReturnIncomevalue() == "" || ReturnFoodCost() == "" || ReturnRentCost() == "" || ReturnClothesCost() == "" ){
-    document.getElementById("empty").style.display="block"
+    // document.getElementById("empty").style.display="block"
+    EmptyCheck(true)
 
   }
   else{
@@ -46,12 +60,12 @@ function calculateTotalExp() {
       let Balance = income - TotalExp;
       document.getElementById('balance').innerText = Balance;
       document.getElementById('worstspend').style.display = 'none';
-      document.getElementById("empty").style.display="none"
+      EmptyCheck(false)
     } else {
       document.getElementById('worstspend').style.display = 'block';
       document.getElementById('totalexp').innerText = '';
       document.getElementById('balance').innerText = '';
-      document.getElementById("empty").style.display="none"
+      EmptyCheck(false)
     }
   }
   
@@ -65,13 +79,27 @@ function SavingAmount() {
 
   let Balancesure = parseFloat(document.getElementById('balance').innerText);
   let remaining = parseFloat(Balancesure - savingCal);
+  if(ReturnSavingInputValue == "0"){
+EmptyCheck(true)
+
+  }
+ else{
+  // let savingvalue = parseFloat(document.getElementById('saving').value);
+  // let incomevalue = ReturnIncomevalue();
+  // let savingCal = parseFloat((incomevalue * savingvalue) / 100);
+
+  // let Balancesure = parseFloat(document.getElementById('balance').innerText);
+  // let remaining = parseFloat(Balancesure - savingCal);
   if (Balancesure >= savingCal && remaining >= 0) {
     document.getElementById('saveamount').innerText = savingCal;
     document.getElementById('remainingbalance').innerText = remaining;
     document.querySelector('.lasterror').style.display = 'none';
+    EmptyCheck(false)
   } else {
     document.querySelector('.lasterror').style.display = 'block';
     document.getElementById('saveamount').innerText = '';
     document.getElementById('remainingbalance').innerText = '';
+    EmptyCheck(false)
   }
+ }
 }
