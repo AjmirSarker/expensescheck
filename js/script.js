@@ -14,7 +14,7 @@ function CheckInput(a) {
   }
 }
 //For Return the desired input Value
-function ReturnIncomevalue() {
+function ReturnIncomeValue() {
    
   return document.getElementById('income-input').value;
 }
@@ -44,14 +44,14 @@ function EmptyCheck(receive){
 }
 //This Function is for Calculating the Expenses and Balance,And also checks Error
 function calculateTotalExp() {
-  let income =parseFloat( ReturnIncomevalue());
+  let income =parseFloat( ReturnIncomeValue());
   let food = parseFloat(ReturnFoodCost());
   let rent = parseFloat(ReturnRentCost());
   let clothes = parseFloat(ReturnClothesCost());
   let TotalExp = parseFloat(
     food + rent + clothes
   );
-  if(ReturnIncomevalue() == "" || ReturnFoodCost() == "" || ReturnRentCost() == "" || ReturnClothesCost() == "" ){
+  if(ReturnIncomeValue() == "" || ReturnFoodCost() == "" || ReturnRentCost() == "" || ReturnClothesCost() == "" ){
     // document.getElementById("empty").style.display="block"
     EmptyCheck(true)
 
@@ -76,13 +76,14 @@ function calculateTotalExp() {
 //This Function is for Calculating the Saving amount and checking Error
 function SavingAmount() {
   let savingvalue = parseFloat(document.getElementById('saving').value);
-  let incomevalue = ReturnIncomevalue();
+  let incomevalue = ReturnIncomeValue();
   let savingCal = parseFloat((incomevalue * savingvalue) / 100);
 
   let Balancesure = parseFloat(document.getElementById('balance').innerText);
   let remaining = parseFloat(Balancesure - savingCal);
   if(ReturnSavingInputValue()== ""){
 EmptyCheck(true)
+
 
   }
  else{
