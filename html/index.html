@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Expense Tracker</title>
+    <title>Money House</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/resources/icon.jfif" type="image/x-icon">
 </head>
 <body class="">
     <section class="container my-5 shadow-lg ">
@@ -22,11 +23,11 @@
                 <!-- form part -->
                 <div class="form text-center card h-100 w-100">
                     <h3 class="my-4 fw-bolder">Income</h3>
-                    <p > <span class="box fw-bold">Income : </span><input type="number" name="" value="" required id="income-input" class="text-center"  onkeyup="CheckInput('income-input')" /></p>
+                    <p > <span class="box fw-bold">Income : </span><input type="number" name="" value="" required id="income-input" placeholder="Income value" class="text-center"  onkeyup="CheckInput('income-input')" /></p>
                     <h3 class="my-4 fw-bolder">Expenses</h3>
-                    <p > <span class="box fw-bold"> Food : </span> <input type="number" name="" value=""required id="food-input" class="text-center"  onkeyup="CheckInput('food-input')"  /></p>
-                    <p > <span class="box fw-bold"> Rent : </span><input type="number" name="" value=""required id="rent-input" class="text-center"   onkeyup="CheckInput('rent-input')" /> </p>
-                    <p > <span class="box fw-bold"> Clothes : </span> <input type="number" name="" required id="clothes-input" class="text-center"   onkeyup="CheckInput('clothes-input')" /> </p>
+                    <p > <span class="box fw-bold"> Food : </span> <input type="number" name="" value=""required id="food-input" placeholder="Food Cost" class="text-center"  onkeyup="CheckInput('food-input')"  /></p>
+                    <p > <span class="box fw-bold"> Rent : </span><input type="number" name="" value=""required id="rent-input" placeholder="Rent Cost" class="text-center"   onkeyup="CheckInput('rent-input')" /> </p>
+                    <p > <span class="box fw-bold"> Clothes : </span> <input type="number" name="" placeholder="Clothes Cost" required id="clothes-input" class="text-center"   onkeyup="CheckInput('clothes-input')" /> </p>
                     <!-- Giving Error Part -->
                     <p  class="fw-bold" id = "W_msg" style="display: none;color: red;"   > <span id="ok"></span> value is wrong</p>
                     <!-- Calculate Expenses Button -->
@@ -37,7 +38,7 @@
                     <p class="fw-bold" id="worstspend" style="display: none;color: red;">Total Expenses is greater than Total Income</p>
                     <h5 class="my-2 fw-bolder">Balance: $  <span id="balance"></span></h5>
                     <p class="fw-bold" >
-                      Save : <input class="w-25 py-2 ms-2 text-center" type="number" id="saving" value="0" onkeyup="CheckInput('saving')"  /> <span class="mx-2 "> %</span>
+                      Save : <input class="w-25 py-2 ms-2 text-center" placeholder="Savings" type="number" id="saving" value="" onkeyup="CheckInput('saving')"  /> <span class="mx-2 "> %</span>
                       <!-- Saving Calculate Button -->
                       <button class="btn btn-1 py-2 px-3" onclick="SavingAmount()">Save</button>
                     </p>

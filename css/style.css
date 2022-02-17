@@ -3,11 +3,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+/* Designing Container */
 .container {
   border: 2px solid rgb(34, 97, 102);
   border-radius: 15px;
 }
+/* Card Design */
 .card {
   background: #e4e1e1;
   border-radius: 10px;

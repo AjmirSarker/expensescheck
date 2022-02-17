@@ -13,6 +13,7 @@ function CheckInput(a) {
     }
   }
 }
+//For Return the desired input Value
 function ReturnIncomevalue() {
    
   return document.getElementById('income-input').value;
@@ -30,6 +31,7 @@ function ReturnClothesCost(){
 function ReturnSavingInputValue(){
   return document.getElementById('saving').value;
 }
+// For Checking Empty Field Input
 function EmptyCheck(receive){
   if(receive){
     document.getElementById("empty").style.display="block"
@@ -79,17 +81,11 @@ function SavingAmount() {
 
   let Balancesure = parseFloat(document.getElementById('balance').innerText);
   let remaining = parseFloat(Balancesure - savingCal);
-  if(ReturnSavingInputValue == "0"){
+  if(ReturnSavingInputValue()== ""){
 EmptyCheck(true)
 
   }
  else{
-  // let savingvalue = parseFloat(document.getElementById('saving').value);
-  // let incomevalue = ReturnIncomevalue();
-  // let savingCal = parseFloat((incomevalue * savingvalue) / 100);
-
-  // let Balancesure = parseFloat(document.getElementById('balance').innerText);
-  // let remaining = parseFloat(Balancesure - savingCal);
   if (Balancesure >= savingCal && remaining >= 0) {
     document.getElementById('saveamount').innerText = savingCal;
     document.getElementById('remainingbalance').innerText = remaining;
