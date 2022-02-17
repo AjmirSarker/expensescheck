@@ -2,53 +2,53 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  
 }
 
 .container {
-  border: 1px solid;
+  border: 2px solid rgb(34, 97, 102);
+  border-radius: 15px;
 }
 .card {
   background: #e4e1e1;
+  border-radius: 10px;
 }
-.image:hover{
-  transition: 1.2s ease-in-out;
+/* This class is for when user hover on Title,Image,Card */
+.Hover:hover {
+  transition: 1.3s ease-in-out;
   transform: scale(1.05);
 }
+/* Shad class is used for Title shadow */
+.shad {
+  text-shadow: 2px 5px 10px cyan;
+}
+/* Below those 2 is used for Input looking */
 input {
-  background: rgb(255, 251, 251);
+  background: rgb(255, 255, 255);
   border: none;
   padding: 5px;
+  border-radius: 5px;
 }
-input:focus{
-  border-radius: 10px;
+input:focus {
+  border-radius: 10px 0px 10px 0px;
   outline: none;
   border: 3px solid rgb(119, 163, 148);
- 
 }
+/* Below  class is used for all buttons in html file */
 .btn-1 {
   color: white !important;
   background-color: rgb(39, 170, 137);
   border-radius: 5px;
   font-weight: 600;
 }
-.btn-1:hover{
+.btn-1:hover {
   color: black !important;
   background-color: rgba(49, 173, 179, 0.479);
   border-radius: 15px;
   transition: 1.5s;
 }
-
+/* Box class is used for input label name  */
 .box {
   display: inline-block;
   width: 23%;
   margin-right: 5%;
-}
-.container{
-  border: 2px solid rgb(34, 97, 102);
-  
-  
-}
-.shad{
-  text-shadow: 2px 5px 10px cyan;
 }
