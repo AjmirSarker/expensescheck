@@ -8,8 +8,10 @@ function CheckInput(a) {
     if (parseInt(document.getElementById(a).value) < 0) {
       document.getElementById('W_msg').style.display = 'block';
       document.getElementById('ok').innerText = a;
+     
     } else {
       document.getElementById('W_msg').style.display = 'none';
+      
     }
   }
 }
