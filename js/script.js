@@ -53,10 +53,16 @@ function calculateTotalExp() {
   let TotalExp = parseFloat(
     food + rent + clothes
   );
-  if(ReturnIncomeValue() == "" || ReturnFoodCost() == "" || ReturnRentCost() == "" || ReturnClothesCost() == "" ){
-    // document.getElementById("empty").style.display="block"
+  if(ReturnIncomeValue() == "" || ReturnFoodCost() == "" || ReturnRentCost() == "" || ReturnClothesCost() == ""  ){
+    
     EmptyCheck(true)
+    document.getElementById('negative').style.display='none'
 
+  }
+  else if(income <0 || food <0 || rent <0 || clothes <0){
+    document.getElementById('negative').style.display='block'
+    document.getElementById('totalexp').innerText=''
+document.getElementById('balance').innerText=''
   }
   else{
     if (income >= TotalExp) {
@@ -65,11 +71,13 @@ function calculateTotalExp() {
       document.getElementById('balance').innerText = Balance;
       document.getElementById('worstspend').style.display = 'none';
       EmptyCheck(false)
+      document.getElementById('negative').style.display='none'
     } else {
       document.getElementById('worstspend').style.display = 'block';
       document.getElementById('totalexp').innerText = '';
       document.getElementById('balance').innerText = '';
       EmptyCheck(false)
+      document.getElementById('negative').style.display='none'
     }
   }
   
@@ -80,12 +88,20 @@ function SavingAmount() {
   let savingvalue = parseFloat(document.getElementById('saving').value);
   let incomevalue = ReturnIncomeValue();
   let savingCal = parseFloat((incomevalue * savingvalue) / 100);
+ 
 
   let Balancesure = parseFloat(document.getElementById('balance').innerText);
   let remaining = parseFloat(Balancesure - savingCal);
   if(ReturnSavingInputValue()== ""){
 EmptyCheck(true)
+document.getElementById('negative').style.display='none'
 
+
+  }
+  else if(savingvalue <0){
+    document.getElementById('negative').style.display='block'
+    document.getElementById('saveamount').innerText = '';
+    document.getElementById('remainingbalance').innerText = '';
 
   }
  else{
@@ -94,11 +110,13 @@ EmptyCheck(true)
     document.getElementById('remainingbalance').innerText = remaining;
     document.querySelector('.lasterror').style.display = 'none';
     EmptyCheck(false)
+    document.getElementById('negative').style.display='none'
   } else {
     document.querySelector('.lasterror').style.display = 'block';
     document.getElementById('saveamount').innerText = '';
     document.getElementById('remainingbalance').innerText = '';
     EmptyCheck(false)
+    document.getElementById('negative').style.display='none'
   }
  }
 }
